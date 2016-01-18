@@ -1,0 +1,3461 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='win' version='8.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8300.14.1212.0958                                -->
+  <preferences>
+  </preferences>
+  <datasources>
+    <datasource caption='testScouting' inline='true' name='msaccess.42027.782361319441' version='8.3'>
+      <connection authentication='no' class='msaccess' driver='Ace12' filename='C:\Users\Robotics\Desktop\Scouting\testScouting.accdb' mdwpath=''>
+        <relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Match Scouting | Scoring].[ID]'>
+              </expression>
+              <expression op='[Pit Scouting].[ID]'>
+              </expression>
+            </expression>
+          </clause>
+          <relation join='left' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[Match Scouting | Scoring].[Team Number]'>
+                </expression>
+                <expression op='[Match Scouting | Field].[Team Number]'>
+                </expression>
+              </expression>
+            </clause>
+            <relation name='Match Scouting | Scoring' table='[Match Scouting | Scoring]' type='table' />
+            <relation name='Match Scouting | Field' table='[Match Scouting | Field]' type='table' />
+          </relation>
+          <relation name='Pit Scouting' table='[Pit Scouting]' type='table' />
+        </relation>
+        <cols>
+          <map key='[A Container]' value='[Pit Scouting].[A Container]' />
+          <map key='[A Containers]' value='[Match Scouting | Scoring].[A Containers]' />
+          <map key='[A Robot (Pit Scouting)]' value='[Pit Scouting].[A Robot]' />
+          <map key='[A Robot]' value='[Match Scouting | Scoring].[A Robot]' />
+          <map key='[A Stacked Tote (Pit Scouting)]' value='[Pit Scouting].[A Stacked Tote]' />
+          <map key='[A Stacked Tote]' value='[Match Scouting | Scoring].[A Stacked Tote]' />
+          <map key='[A Tote]' value='[Pit Scouting].[A Tote]' />
+          <map key='[A Totes]' value='[Match Scouting | Scoring].[A Totes]' />
+          <map key='[Auto]' value='[Match Scouting | Field].[Auto]' />
+          <map key='[Base Type]' value='[Pit Scouting].[Base Type]' />
+          <map key='[Bump (Pit Scouting)]' value='[Pit Scouting].[Bump]' />
+          <map key='[Bump]' value='[Match Scouting | Field].[Bump]' />
+          <map key='[Capacity]' value='[Pit Scouting].[Capacity]' />
+          <map key='[Cards]' value='[Match Scouting | Field].[Cards]' />
+          <map key='[Collection Method]' value='[Pit Scouting].[Collection Method]' />
+          <map key='[Comments (Match Scouting | Scoring)]' value='[Match Scouting | Scoring].[Comments]' />
+          <map key='[Comments (Pit Scouting)]' value='[Pit Scouting].[Comments]' />
+          <map key='[Comments]' value='[Match Scouting | Field].[Comments]' />
+          <map key='[Containers]' value='[Pit Scouting].[Containers]' />
+          <map key='[Coopertition Totes]' value='[Match Scouting | Field].[Coopertition Totes]' />
+          <map key='[Coopertition]' value='[Pit Scouting].[Coopertition]' />
+          <map key='[Dead Robot]' value='[Match Scouting | Field].[Dead Robot]' />
+          <map key='[Dimensions]' value='[Pit Scouting].[Dimensions]' />
+          <map key='[Driving Ability]' value='[Match Scouting | Field].[Driving Ability]' />
+          <map key='[Foul]' value='[Match Scouting | Field].[Foul]' />
+          <map key='[Highest Bin]' value='[Match Scouting | Field].[Highest Bin]' />
+          <map key='[Highest Level]' value='[Pit Scouting].[Highest Level]' />
+          <map key='[Highest Tote]' value='[Match Scouting | Field].[Highest Tote]' />
+          <map key='[Human Player]' value='[Pit Scouting].[Human Player]' />
+          <map key='[ID (Match Scouting | Field)]' value='[Match Scouting | Field].[ID]' />
+          <map key='[ID (Pit Scouting)]' value='[Pit Scouting].[ID]' />
+          <map key='[ID]' value='[Match Scouting | Scoring].[ID]' />
+          <map key='[Internal Stacking]' value='[Pit Scouting].[Internal Stacking]' />
+          <map key='[Litter]' value='[Pit Scouting].[Litter]' />
+          <map key='[Match Number (Match Scouting | Field)]' value='[Match Scouting | Field].[Match Number]' />
+          <map key='[Match Number]' value='[Match Scouting | Scoring].[Match Number]' />
+          <map key='[Motors]' value='[Pit Scouting].[Motors]' />
+          <map key='[No Show]' value='[Match Scouting | Field].[No Show]' />
+          <map key='[Primary Zone (Pit Scouting)]' value='[Pit Scouting].[Primary Zone]' />
+          <map key='[Primary Zone]' value='[Match Scouting | Field].[Primary Zone]' />
+          <map key='[Robot Speed]' value='[Pit Scouting].[Robot Speed]' />
+          <map key='[Scoring Ability]' value='[Match Scouting | Field].[Scoring Ability]' />
+          <map key='[Scoring Tactic]' value='[Match Scouting | Field].[Scoring Tactic]' />
+          <map key='[Stacking Speed]' value='[Pit Scouting].[Stacking Speed]' />
+          <map key='[Starting Position (Pit Scouting)]' value='[Pit Scouting].[Starting Position]' />
+          <map key='[Starting Position]' value='[Match Scouting | Field].[Starting Position]' />
+          <map key='[Storage Capacity]' value='[Match Scouting | Field].[Storage Capacity]' />
+          <map key='[T Container Level]' value='[Match Scouting | Scoring].[T Container Level]' />
+          <map key='[T Coopertition Set]' value='[Match Scouting | Scoring].[T Coopertition Set]' />
+          <map key='[T Coopertition Stack]' value='[Match Scouting | Scoring].[T Coopertition Stack]' />
+          <map key='[T Litter in Container]' value='[Match Scouting | Scoring].[T Litter in Container]' />
+          <map key='[T Litter in Landfill]' value='[Match Scouting | Scoring].[T Litter in Landfill]' />
+          <map key='[T Totes]' value='[Match Scouting | Scoring].[T Totes]' />
+          <map key='[Team Name]' value='[Pit Scouting].[Team Name]' />
+          <map key='[Team Number (Match Scouting | Field)]' value='[Match Scouting | Field].[Team Number]' />
+          <map key='[Team Number (Pit Scouting)]' value='[Pit Scouting].[Team Number]' />
+          <map key='[Team Number]' value='[Match Scouting | Scoring].[Team Number]' />
+          <map key='[Totes]' value='[Pit Scouting].[Totes]' />
+          <map key='[Tracking]' value='[Pit Scouting].[Tracking]' />
+          <map key='[Transmission]' value='[Pit Scouting].[Transmission]' />
+          <map key='[Type of Drivetrain]' value='[Pit Scouting].[Type of Drivetrain]' />
+          <map key='[Type of Wheels]' value='[Pit Scouting].[Type of Wheels]' />
+          <map key='[Upside-down Totes]' value='[Pit Scouting].[Upside-down Totes]' />
+          <map key='[Weight]' value='[Pit Scouting].[Weight]' />
+        </cols>
+        <refresh incremental-updates=''>
+        </refresh>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>A Containers</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[A Containers]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>A Containers</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A Robot</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[A Robot]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>A Robot</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A Stacked Tote</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[A Stacked Tote]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>A Stacked Tote</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A Totes</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[A Totes]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>A Totes</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Comments</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Comments (Match Scouting | Scoring)]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>Comments</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Match Number</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Match Number]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>Match Number</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>T Container Level</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[T Container Level]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>T Container Level</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>T Coopertition Set</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[T Coopertition Set]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>T Coopertition Set</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>T Coopertition Stack</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[T Coopertition Stack]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>T Coopertition Stack</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>T Litter in Container</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[T Litter in Container]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>T Litter in Container</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>T Litter in Landfill</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[T Litter in Landfill]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>T Litter in Landfill</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>T Totes</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[T Totes]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>T Totes</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Team Number</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Team Number]</local-name>
+            <parent-name>[Match Scouting | Scoring]</parent-name>
+            <remote-alias>Team Number</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Auto</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Auto]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Auto</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bump</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Bump]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Bump</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cards</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Cards]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Cards</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Comments</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Comments]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Comments</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Coopertition Totes</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Coopertition Totes]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Coopertition Totes</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dead Robot</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Dead Robot]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Dead Robot</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Driving Ability</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Driving Ability]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Driving Ability</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Foul</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Foul]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Foul</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Highest Bin</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Highest Bin]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Highest Bin</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Highest Tote</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Highest Tote]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Highest Tote</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID (Match Scouting | Field)]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Match Number</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Match Number (Match Scouting | Field)]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Match Number</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>No Show</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[No Show]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>No Show</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Primary Zone</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Primary Zone]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Primary Zone</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Scoring Ability</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Scoring Ability]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Scoring Ability</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Scoring Tactic</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Scoring Tactic]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Scoring Tactic</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Starting Position</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Starting Position]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Starting Position</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Storage Capacity</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Storage Capacity]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Storage Capacity</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Team Number</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Team Number (Match Scouting | Field)]</local-name>
+            <parent-name>[Match Scouting | Field]</parent-name>
+            <remote-alias>Team Number</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A Container</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[A Container]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>A Container</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A Robot</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[A Robot (Pit Scouting)]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>A Robot</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A Stacked Tote</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[A Stacked Tote (Pit Scouting)]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>A Stacked Tote</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>A Tote</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[A Tote]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>A Tote</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Base Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Base Type]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Base Type</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bump</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Bump (Pit Scouting)]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Bump</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Capacity</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Capacity]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Capacity</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Collection Method</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Collection Method]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Collection Method</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Comments</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Comments (Pit Scouting)]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Comments</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Containers</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Containers]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Containers</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Coopertition</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Coopertition]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Coopertition</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dimensions</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Dimensions]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Dimensions</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Highest Level</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Highest Level]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Highest Level</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Human Player</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Human Player]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Human Player</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID (Pit Scouting)]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Internal Stacking</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Internal Stacking]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Internal Stacking</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Litter</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Litter]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Litter</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Motors</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Motors]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Motors</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Primary Zone</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Primary Zone (Pit Scouting)]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Primary Zone</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Robot Speed</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Robot Speed]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Robot Speed</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stacking Speed</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Stacking Speed]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Stacking Speed</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Starting Position</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Starting Position (Pit Scouting)]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Starting Position</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Team Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Team Name]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Team Name</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Team Number</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Team Number (Pit Scouting)]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Team Number</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I4&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Totes</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Totes]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Totes</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tracking</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Tracking]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Tracking</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transmission</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Transmission]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Transmission</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type of Drivetrain</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Type of Drivetrain]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Type of Drivetrain</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type of Wheels</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Type of Wheels]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Type of Wheels</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Upside-down Totes</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Upside-down Totes]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Upside-down Totes</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Weight</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Weight]</local-name>
+            <parent-name>[Pit Scouting]</parent-name>
+            <remote-alias>Weight</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total Score' datatype='integer' name='[Calculation_0740123202009117]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_3600123200835979]+[Calculation_1120123201029979]' scope-isolation='false' />
+      </column>
+      <column caption='Autonomous Value' datatype='integer' name='[Calculation_0980123190836616]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [A Stacked Tote] = TRUE THEN 20 ELSE [A Totes]*3 END +&#13;&#10;[A Containers]*4 +&#13;&#10;IIF([A Robot] = TRUE, 2, 0)' scope-isolation='false' />
+      </column>
+      <column caption='Tele-Op Score' datatype='integer' name='[Calculation_1120123201029979]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[T Container Level]*4 +&#13;&#10;[T Litter in Container]*6 +&#13;&#10;[T Totes]*2' scope-isolation='false' />
+      </column>
+      <column caption='Autonomous Score' datatype='integer' name='[Calculation_3600123200835979]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [A Stacked Tote] = TRUE THEN 20 ELSEIF [A Totes]=3 THEN 6 END +&#13;&#10;IIF([A Containers] = 3, 8, 0) +&#13;&#10;IIF([A Robot] = TRUE, 4, 0)' scope-isolation='false' />
+      </column>
+      <column caption='Dead Bot Count' datatype='integer' name='[Calculation_6780218133757428]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if [Dead Robot]&#13;&#10;then 1&#13;&#10;else 0&#13;&#10;end' scope-isolation='false' />
+      </column>
+      <column caption='Reliability' datatype='integer' name='[Calculation_9440218134121677]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Foul] +&#13;&#10;[Cards] +&#13;&#10;[Calculation_6780218133757428] +&#13;&#10;[Calculation_9900218134017498]' scope-isolation='false' />
+      </column>
+      <column caption='No Show Count' datatype='integer' name='[Calculation_9900218134017498]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if [No Show]&#13;&#10;then 1&#13;&#10;else 0&#13;&#10;end' scope-isolation='false' />
+      </column>
+      <column datatype='integer' name='[ID (Match Scouting | Field)]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[ID (Pit Scouting)]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[Match Number (Match Scouting | Field)]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Match Number]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Team Number (Match Scouting | Field)]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[Team Number (Pit Scouting)]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[Team Number]' role='dimension' type='ordinal'>
+      </column>
+      <column-instance column='[Calculation_0740123202009117]' derivation='Avg' name='[avg:Calculation_0740123202009117:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_0980123190836616]' derivation='Avg' name='[avg:Calculation_0980123190836616:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1120123201029979]' derivation='Avg' name='[avg:Calculation_1120123201029979:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_3600123200835979]' derivation='Avg' name='[avg:Calculation_3600123200835979:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_0740123202009117]' derivation='Max' name='[max:Calculation_0740123202009117:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_0980123190836616]' derivation='Max' name='[max:Calculation_0980123190836616:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1120123201029979]' derivation='Max' name='[max:Calculation_1120123201029979:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_3600123200835979]' derivation='Max' name='[max:Calculation_3600123200835979:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_0740123202009117]' derivation='Min' name='[min:Calculation_0740123202009117:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_0980123190836616]' derivation='Min' name='[min:Calculation_0980123190836616:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1120123201029979]' derivation='Min' name='[min:Calculation_1120123201029979:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_3600123200835979]' derivation='Min' name='[min:Calculation_3600123200835979:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Users\Robotics\Desktop\Scouting\testScouting.tde' schema='Extract' tablename='Extract' update-time='02/19/2015 12:08:23 AM' updated-database='C:\Users\Robotics\Desktop\Scouting\Scouting2015.tde'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[A Container]' value='[Extract].[A Container]' />
+            <map key='[A Containers]' value='[Extract].[A Containers]' />
+            <map key='[A Robot (Pit Scouting)]' value='[Extract].[A Robot]' />
+            <map key='[A Robot]' value='[Extract].[A Robot1]' />
+            <map key='[A Stacked Tote (Pit Scouting)]' value='[Extract].[A Stacked Tote]' />
+            <map key='[A Stacked Tote]' value='[Extract].[A Stacked Tote1]' />
+            <map key='[A Tote]' value='[Extract].[A Tote]' />
+            <map key='[A Totes]' value='[Extract].[A Totes]' />
+            <map key='[Auto]' value='[Extract].[Auto]' />
+            <map key='[Base Type]' value='[Extract].[Base Type]' />
+            <map key='[Bump (Pit Scouting)]' value='[Extract].[Bump]' />
+            <map key='[Bump]' value='[Extract].[Bump1]' />
+            <map key='[Capacity]' value='[Extract].[Capacity]' />
+            <map key='[Cards]' value='[Extract].[Cards]' />
+            <map key='[Collection Method]' value='[Extract].[Collection Method]' />
+            <map key='[Comments (Match Scouting | Scoring)]' value='[Extract].[Comments]' />
+            <map key='[Comments (Pit Scouting)]' value='[Extract].[Comments1]' />
+            <map key='[Comments]' value='[Extract].[Comments2]' />
+            <map key='[Containers]' value='[Extract].[Containers]' />
+            <map key='[Coopertition Totes]' value='[Extract].[Coopertition Totes]' />
+            <map key='[Coopertition]' value='[Extract].[Coopertition]' />
+            <map key='[Dead Robot]' value='[Extract].[Dead Robot]' />
+            <map key='[Dimensions]' value='[Extract].[Dimensions]' />
+            <map key='[Driving Ability]' value='[Extract].[Driving Ability]' />
+            <map key='[Foul]' value='[Extract].[Foul]' />
+            <map key='[Highest Bin]' value='[Extract].[Highest Bin]' />
+            <map key='[Highest Level]' value='[Extract].[Highest Level]' />
+            <map key='[Highest Tote]' value='[Extract].[Highest Tote]' />
+            <map key='[Human Player]' value='[Extract].[Human Player]' />
+            <map key='[ID (Match Scouting | Field)]' value='[Extract].[ID]' />
+            <map key='[ID (Pit Scouting)]' value='[Extract].[ID1]' />
+            <map key='[ID]' value='[Extract].[ID2]' />
+            <map key='[Internal Stacking]' value='[Extract].[Internal Stacking]' />
+            <map key='[Litter]' value='[Extract].[Litter]' />
+            <map key='[Match Number (Match Scouting | Field)]' value='[Extract].[Match Number]' />
+            <map key='[Match Number]' value='[Extract].[Match Number1]' />
+            <map key='[Motors]' value='[Extract].[Motors]' />
+            <map key='[No Show]' value='[Extract].[No Show]' />
+            <map key='[Number of Records]' value='[Extract].[Number of Records]' />
+            <map key='[Primary Zone (Pit Scouting)]' value='[Extract].[Primary Zone]' />
+            <map key='[Primary Zone]' value='[Extract].[Primary Zone1]' />
+            <map key='[Robot Speed]' value='[Extract].[Robot Speed]' />
+            <map key='[Scoring Ability]' value='[Extract].[Scoring Ability]' />
+            <map key='[Scoring Tactic]' value='[Extract].[Scoring Tactic]' />
+            <map key='[Stacking Speed]' value='[Extract].[Stacking Speed]' />
+            <map key='[Starting Position (Pit Scouting)]' value='[Extract].[Starting Position]' />
+            <map key='[Starting Position]' value='[Extract].[Starting Position1]' />
+            <map key='[Storage Capacity]' value='[Extract].[Storage Capacity]' />
+            <map key='[T Container Level]' value='[Extract].[T Container Level]' />
+            <map key='[T Coopertition Set]' value='[Extract].[T Coopertition Set]' />
+            <map key='[T Coopertition Stack]' value='[Extract].[T Coopertition Stack]' />
+            <map key='[T Litter in Container]' value='[Extract].[T Litter in Container]' />
+            <map key='[T Litter in Landfill]' value='[Extract].[T Litter in Landfill]' />
+            <map key='[T Totes]' value='[Extract].[T Totes]' />
+            <map key='[Team Name]' value='[Extract].[Team Name]' />
+            <map key='[Team Number (Match Scouting | Field)]' value='[Extract].[Team Number]' />
+            <map key='[Team Number (Pit Scouting)]' value='[Extract].[Team Number1]' />
+            <map key='[Team Number]' value='[Extract].[Team Number2]' />
+            <map key='[Totes]' value='[Extract].[Totes]' />
+            <map key='[Tracking]' value='[Extract].[Tracking]' />
+            <map key='[Transmission]' value='[Extract].[Transmission]' />
+            <map key='[Type of Drivetrain]' value='[Extract].[Type of Drivetrain]' />
+            <map key='[Type of Wheels]' value='[Extract].[Type of Wheels]' />
+            <map key='[Upside-down Totes]' value='[Extract].[Upside-down Totes]' />
+            <map key='[Weight]' value='[Extract].[Weight]' />
+          </cols>
+          <calculations>
+            <calculation column='[Calculation_0740123202009117]' formula='[Calculation_3600123200835979]+[Calculation_1120123201029979]' />
+            <calculation column='[Calculation_0980123190836616]' formula='IF [A Stacked Tote] = TRUE THEN 20 ELSE [A Totes]*3 END +&#13;&#10;[A Containers]*4 +&#13;&#10;IIF([A Robot] = TRUE, 2, 0)' />
+            <calculation column='[Calculation_1120123201029979]' formula='[T Container Level]*4 +&#13;&#10;[T Litter in Container]*6 +&#13;&#10;[T Litter in Landfill]*1 +&#13;&#10;[T Totes]*2' />
+            <calculation column='[Calculation_3600123200835979]' formula='IF [A Stacked Tote] = TRUE THEN 20 ELSEIF [A Totes]=3 THEN 6 END +&#13;&#10;IIF([A Containers] = 3, 8, 0) +&#13;&#10;IIF([A Robot] = TRUE, 4, 0)' />
+            <calculation column='[Calculation_6780218133757428]' formula='if [Dead Robot]&#13;&#10;then 1&#13;&#10;else 0&#13;&#10;end' />
+            <calculation column='[Calculation_9440218134121677]' formula='[Foul] +&#13;&#10;[Cards] +&#13;&#10;[Calculation_6780218133757428] +&#13;&#10;[Calculation_9900218134017498]' />
+            <calculation column='[Calculation_9900218134017498]' formula='if [No Show]&#13;&#10;then 1&#13;&#10;else 0&#13;&#10;end' />
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='0' timestamp-start='2015-02-19 00:08:23.259' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>A Container</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[A Container]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>A Container</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>A Containers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[A Containers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>A Containers</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>A Robot</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[A Robot (Pit Scouting)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>A Robot</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>A Robot1</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[A Robot]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>A Robot1</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>A Stacked Tote</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[A Stacked Tote (Pit Scouting)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>A Stacked Tote</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>A Stacked Tote1</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[A Stacked Tote]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>A Stacked Tote1</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>A Tote</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[A Tote]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>A Tote</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>A Totes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[A Totes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>A Totes</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Auto</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Auto]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Auto</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Base Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Base Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Base Type</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Bump</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Bump (Pit Scouting)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Bump</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Bump1</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Bump]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Bump1</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Capacity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Capacity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Capacity</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cards</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Cards]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cards</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Collection Method</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Collection Method]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Collection Method</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Comments</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Comments (Match Scouting | Scoring)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Comments</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Comments1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Comments (Pit Scouting)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Comments1</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Comments2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Comments]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Comments2</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Containers</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Containers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Containers</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Coopertition Totes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Coopertition Totes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Coopertition Totes</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Coopertition</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Coopertition]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Coopertition</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Dead Robot</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Dead Robot]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Dead Robot</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Dimensions</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Dimensions]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Dimensions</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Driving Ability</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Driving Ability]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Driving Ability</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Foul</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Foul]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Foul</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Highest Bin</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Highest Bin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Highest Bin</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Highest Level</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Highest Level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Highest Level</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Highest Tote</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Highest Tote]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Highest Tote</remote-alias>
+              <ordinal>27</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Human Player</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Human Player]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Human Player</remote-alias>
+              <ordinal>28</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ID (Match Scouting | Field)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ID</remote-alias>
+              <ordinal>29</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ID1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ID (Pit Scouting)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ID1</remote-alias>
+              <ordinal>30</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ID2</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ID2</remote-alias>
+              <ordinal>31</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Internal Stacking</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Internal Stacking]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Internal Stacking</remote-alias>
+              <ordinal>32</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Litter</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Litter]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Litter</remote-alias>
+              <ordinal>33</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Match Number</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Match Number (Match Scouting | Field)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Match Number</remote-alias>
+              <ordinal>34</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Match Number1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Match Number]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Match Number1</remote-alias>
+              <ordinal>35</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Motors</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Motors]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Motors</remote-alias>
+              <ordinal>36</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>No Show</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[No Show]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>No Show</remote-alias>
+              <ordinal>37</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>38</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Primary Zone</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Primary Zone (Pit Scouting)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Primary Zone</remote-alias>
+              <ordinal>39</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Primary Zone1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Primary Zone]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Primary Zone1</remote-alias>
+              <ordinal>40</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Robot Speed</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Robot Speed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Robot Speed</remote-alias>
+              <ordinal>41</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Scoring Ability</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Scoring Ability]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Scoring Ability</remote-alias>
+              <ordinal>42</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Scoring Tactic</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Scoring Tactic]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Scoring Tactic</remote-alias>
+              <ordinal>43</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Stacking Speed</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Stacking Speed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Stacking Speed</remote-alias>
+              <ordinal>44</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Starting Position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Starting Position (Pit Scouting)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Starting Position</remote-alias>
+              <ordinal>45</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Starting Position1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Starting Position]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Starting Position1</remote-alias>
+              <ordinal>46</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Storage Capacity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Storage Capacity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Storage Capacity</remote-alias>
+              <ordinal>47</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>T Container Level</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[T Container Level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>T Container Level</remote-alias>
+              <ordinal>48</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>T Coopertition Set</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[T Coopertition Set]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>T Coopertition Set</remote-alias>
+              <ordinal>49</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>T Coopertition Stack</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[T Coopertition Stack]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>T Coopertition Stack</remote-alias>
+              <ordinal>50</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>T Litter in Container</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[T Litter in Container]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>T Litter in Container</remote-alias>
+              <ordinal>51</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>T Litter in Landfill</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[T Litter in Landfill]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>T Litter in Landfill</remote-alias>
+              <ordinal>52</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>T Totes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[T Totes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>T Totes</remote-alias>
+              <ordinal>53</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Team Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Team Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Team Name</remote-alias>
+              <ordinal>54</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Team Number</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Team Number (Match Scouting | Field)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Team Number</remote-alias>
+              <ordinal>55</ordinal>
+              <family>Match Scouting | Field</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Team Number1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Team Number (Pit Scouting)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Team Number1</remote-alias>
+              <ordinal>56</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Team Number2</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Team Number]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Team Number2</remote-alias>
+              <ordinal>57</ordinal>
+              <family>Match Scouting | Scoring</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Totes</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Totes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Totes</remote-alias>
+              <ordinal>58</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tracking</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Tracking]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tracking</remote-alias>
+              <ordinal>59</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Transmission</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Transmission]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transmission</remote-alias>
+              <ordinal>60</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Type of Drivetrain</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Type of Drivetrain]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Type of Drivetrain</remote-alias>
+              <ordinal>61</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Type of Wheels</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Type of Wheels]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Type of Wheels</remote-alias>
+              <ordinal>62</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Upside-down Totes</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Upside-down Totes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Upside-down Totes</remote-alias>
+              <ordinal>63</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <contains-null>false</contains-null>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Weight</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Weight]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Weight</remote-alias>
+              <ordinal>64</ordinal>
+              <family>Pit Scouting</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>0</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#09622a'>
+              <bucket>&quot;[msaccess.42027.782361319441].[max:Calculation_0740123202009117:qk]&quot;</bucket>
+            </map>
+            <map to='#26456e'>
+              <bucket>&quot;[msaccess.42027.782361319441].[max:Calculation_1120123201029979:qk]&quot;</bucket>
+            </map>
+            <map to='#339444'>
+              <bucket>&quot;[msaccess.42027.782361319441].[avg:Calculation_0740123202009117:qk]&quot;</bucket>
+            </map>
+            <map to='#3a87b7'>
+              <bucket>&quot;[msaccess.42027.782361319441].[avg:Calculation_1120123201029979:qk]&quot;</bucket>
+            </map>
+            <map to='#7b3014'>
+              <bucket>&quot;[msaccess.42027.782361319441].[max:Calculation_0980123190836616:qk]&quot;</bucket>
+            </map>
+            <map to='#9c0824'>
+              <bucket>&quot;[msaccess.42027.782361319441].[max:Calculation_3600123200835979:qk]&quot;</bucket>
+            </map>
+            <map to='#b4d4da'>
+              <bucket>&quot;[msaccess.42027.782361319441].[min:Calculation_1120123201029979:qk]&quot;</bucket>
+            </map>
+            <map to='#bccfb4'>
+              <bucket>&quot;[msaccess.42027.782361319441].[min:Calculation_0740123202009117:qk]&quot;</bucket>
+            </map>
+            <map to='#d8392c'>
+              <bucket>&quot;[msaccess.42027.782361319441].[avg:Calculation_3600123200835979:qk]&quot;</bucket>
+            </map>
+            <map to='#eac0bd'>
+              <bucket>&quot;[msaccess.42027.782361319441].[min:Calculation_3600123200835979:qk]&quot;</bucket>
+            </map>
+            <map to='#f06511'>
+              <bucket>&quot;[msaccess.42027.782361319441].[avg:Calculation_0980123190836616:qk]&quot;</bucket>
+            </map>
+            <map to='#f0c294'>
+              <bucket>&quot;[msaccess.42027.782361319441].[min:Calculation_0980123190836616:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Autonomous Score'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='testScouting' name='msaccess.42027.782361319441' />
+          </datasources>
+          <datasource-dependencies datasource='msaccess.42027.782361319441'>
+            <column caption='Autonomous Score' datatype='integer' name='[Calculation_3600123200835979]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [A Stacked Tote] = TRUE THEN 20 ELSEIF [A Totes]=3 THEN 6 END +&#13;&#10;IIF([A Containers] = 3, 8, 0) +&#13;&#10;IIF([A Robot] = TRUE, 4, 0)' scope-isolation='false' />
+            </column>
+            <column datatype='integer' name='[Team Number]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Calculation_3600123200835979]' derivation='Avg' name='[avg:Calculation_3600123200835979:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3600123200835979]' derivation='Max' name='[max:Calculation_3600123200835979:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3600123200835979]' derivation='Min' name='[min:Calculation_3600123200835979:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Team Number]' derivation='None' name='[none:Team Number:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[msaccess.42027.782361319441].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[min:Calculation_3600123200835979:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[avg:Calculation_3600123200835979:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[max:Calculation_3600123200835979:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[msaccess.42027.782361319441].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[msaccess.42027.782361319441].[min:Calculation_3600123200835979:qk]&quot;</bucket>
+              <bucket>&quot;[msaccess.42027.782361319441].[avg:Calculation_3600123200835979:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[msaccess.42027.782361319441].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='off' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[msaccess.42027.782361319441].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[msaccess.42027.782361319441].[none:Team Number:ok]</rows>
+        <cols>[msaccess.42027.782361319441].[Multiple Values]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Autonomous Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='testScouting' name='msaccess.42027.782361319441' />
+          </datasources>
+          <datasource-dependencies datasource='msaccess.42027.782361319441'>
+            <column caption='Autonomous Value' datatype='integer' name='[Calculation_0980123190836616]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [A Stacked Tote] = TRUE THEN 20 ELSE [A Totes]*3 END +&#13;&#10;[A Containers]*4 +&#13;&#10;IIF([A Robot] = TRUE, 2, 0)' scope-isolation='false' />
+            </column>
+            <column caption='Tele-Op Score' datatype='integer' name='[Calculation_1120123201029979]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[T Container Level]*4 +&#13;&#10;[T Litter in Container]*6 +&#13;&#10;[T Totes]*2' scope-isolation='false' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[Match Number]' role='dimension' type='ordinal'>
+            </column>
+            <column datatype='integer' name='[Team Number]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Match Number]' derivation='None' name='[none:Match Number:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Team Number]' derivation='None' name='[none:Team Number:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_0980123190836616]' derivation='Sum' name='[sum:Calculation_0980123190836616:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1120123201029979]' derivation='Sum' name='[sum:Calculation_1120123201029979:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' y-axis-name='[msaccess.42027.782361319441].[sum:Calculation_0980123190836616:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' y-axis-name='[msaccess.42027.782361319441].[sum:Calculation_1120123201029979:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([msaccess.42027.782361319441].[none:Team Number:ok] * ([msaccess.42027.782361319441].[sum:Calculation_0980123190836616:qk] + [msaccess.42027.782361319441].[sum:Calculation_1120123201029979:qk]))</rows>
+        <cols>[msaccess.42027.782361319441].[none:Match Number:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Autonomous Value'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='testScouting' name='msaccess.42027.782361319441' />
+          </datasources>
+          <datasource-dependencies datasource='msaccess.42027.782361319441'>
+            <column caption='Autonomous Value' datatype='integer' name='[Calculation_0980123190836616]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [A Stacked Tote] = TRUE THEN 20 ELSE [A Totes]*3 END +&#13;&#10;[A Containers]*4 +&#13;&#10;IIF([A Robot] = TRUE, 2, 0)' scope-isolation='false' />
+            </column>
+            <column datatype='integer' name='[Team Number]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Calculation_0980123190836616]' derivation='Avg' name='[avg:Calculation_0980123190836616:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0980123190836616]' derivation='Max' name='[max:Calculation_0980123190836616:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0980123190836616]' derivation='Min' name='[min:Calculation_0980123190836616:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Team Number]' derivation='None' name='[none:Team Number:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[msaccess.42027.782361319441].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[min:Calculation_0980123190836616:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[avg:Calculation_0980123190836616:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[max:Calculation_0980123190836616:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[msaccess.42027.782361319441].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[msaccess.42027.782361319441].[min:Calculation_0980123190836616:qk]&quot;</bucket>
+              <bucket>&quot;[msaccess.42027.782361319441].[avg:Calculation_0980123190836616:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[msaccess.42027.782361319441].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='off' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[msaccess.42027.782361319441].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[msaccess.42027.782361319441].[none:Team Number:ok]</rows>
+        <cols>[msaccess.42027.782361319441].[Multiple Values]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Distribution'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='testScouting' name='msaccess.42027.782361319441' />
+          </datasources>
+          <datasource-dependencies datasource='msaccess.42027.782361319441'>
+            <column caption='Tele-Op Score' datatype='integer' name='[Calculation_1120123201029979]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[T Container Level]*4 +&#13;&#10;[T Litter in Container]*6 +&#13;&#10;[T Totes]*2' scope-isolation='false' />
+            </column>
+            <column caption='Autonomous Score' datatype='integer' name='[Calculation_3600123200835979]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [A Stacked Tote] = TRUE THEN 20 ELSEIF [A Totes]=3 THEN 6 END +&#13;&#10;IIF([A Containers] = 3, 8, 0) +&#13;&#10;IIF([A Robot] = TRUE, 4, 0)' scope-isolation='false' />
+            </column>
+            <column datatype='integer' name='[Team Number]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Calculation_1120123201029979]' derivation='Avg' name='[avg:Calculation_1120123201029979:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3600123200835979]' derivation='Avg' name='[avg:Calculation_3600123200835979:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Team Number]' derivation='None' name='[none:Team Number:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[msaccess.42027.782361319441].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[avg:Calculation_3600123200835979:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[avg:Calculation_1120123201029979:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[msaccess.42027.782361319441].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane id='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[msaccess.42027.782361319441].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[msaccess.42027.782361319441].[none:Team Number:ok]</rows>
+        <cols>[msaccess.42027.782361319441].[Multiple Values]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Pit Scouting Summary'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='testScouting' name='msaccess.42027.782361319441' />
+          </datasources>
+          <datasource-dependencies datasource='msaccess.42027.782361319441'>
+            <column datatype='boolean' name='[A Container]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='boolean' name='[A Robot (Pit Scouting)]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='boolean' name='[A Stacked Tote (Pit Scouting)]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='boolean' name='[A Tote]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[Base Type]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[Capacity]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='boolean' name='[Containers]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='boolean' name='[Coopertition]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='boolean' name='[Litter]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[Primary Zone (Pit Scouting)]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[Robot Speed]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[Starting Position (Pit Scouting)]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[Team Name]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='integer' name='[Team Number (Pit Scouting)]' role='dimension' type='ordinal'>
+            </column>
+            <column datatype='boolean' name='[Totes]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[Type of Drivetrain]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='boolean' name='[Upside-down Totes]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[A Container]' derivation='None' name='[none:A Container:nk]' pivot='key' type='nominal' />
+            <column-instance column='[A Robot (Pit Scouting)]' derivation='None' name='[none:A Robot (Pit Scouting):nk]' pivot='key' type='nominal' />
+            <column-instance column='[A Stacked Tote (Pit Scouting)]' derivation='None' name='[none:A Stacked Tote (Pit Scouting):nk]' pivot='key' type='nominal' />
+            <column-instance column='[A Tote]' derivation='None' name='[none:A Tote:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Base Type]' derivation='None' name='[none:Base Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Capacity]' derivation='None' name='[none:Capacity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Containers]' derivation='None' name='[none:Containers:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Coopertition]' derivation='None' name='[none:Coopertition:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Litter]' derivation='None' name='[none:Litter:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Primary Zone (Pit Scouting)]' derivation='None' name='[none:Primary Zone (Pit Scouting):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Robot Speed]' derivation='None' name='[none:Robot Speed:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Starting Position (Pit Scouting)]' derivation='None' name='[none:Starting Position (Pit Scouting):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Team Name]' derivation='None' name='[none:Team Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Team Number (Pit Scouting)]' derivation='None' name='[none:Team Number (Pit Scouting):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Totes]' derivation='None' name='[none:Totes:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type of Drivetrain]' derivation='None' name='[none:Type of Drivetrain:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Upside-down Totes]' derivation='None' name='[none:Upside-down Totes:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([msaccess.42027.782361319441].[none:Team Number (Pit Scouting):ok] / ([msaccess.42027.782361319441].[none:Team Name:nk] / ([msaccess.42027.782361319441].[none:Base Type:nk] / ([msaccess.42027.782361319441].[none:Type of Drivetrain:nk] / ([msaccess.42027.782361319441].[none:Capacity:nk] / ([msaccess.42027.782361319441].[none:Containers:nk] / ([msaccess.42027.782361319441].[none:Totes:nk] / ([msaccess.42027.782361319441].[none:Litter:nk] / ([msaccess.42027.782361319441].[none:Upside-down Totes:nk] / ([msaccess.42027.782361319441].[none:Starting Position (Pit Scouting):nk] / ([msaccess.42027.782361319441].[none:A Robot (Pit Scouting):nk] / ([msaccess.42027.782361319441].[none:A Tote:nk] / ([msaccess.42027.782361319441].[none:A Container:nk] / ([msaccess.42027.782361319441].[none:A Stacked Tote (Pit Scouting):nk] / ([msaccess.42027.782361319441].[none:Primary Zone (Pit Scouting):nk] / ([msaccess.42027.782361319441].[none:Coopertition:nk] / [msaccess.42027.782361319441].[none:Robot Speed:nk]))))))))))))))))</rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+    <worksheet name='Reliability'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='testScouting' name='msaccess.42027.782361319441' />
+          </datasources>
+          <datasource-dependencies datasource='msaccess.42027.782361319441'>
+            <column caption='Reliability' datatype='integer' name='[Calculation_9440218134121677]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Foul] +&#13;&#10;[Cards] +&#13;&#10;[Calculation_6780218133757428] +&#13;&#10;[Calculation_9900218134017498]' scope-isolation='false' />
+            </column>
+            <column datatype='integer' name='[Driving Ability]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Team Number]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Team Number]' derivation='None' name='[none:Team Number:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_9440218134121677]' derivation='Sum' name='[sum:Calculation_9440218134121677:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Driving Ability]' derivation='Sum' name='[sum:Driving Ability:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='subtitle' class='0' field='[msaccess.42027.782361319441].[sum:Calculation_9440218134121677:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[msaccess.42027.782361319441].[sum:Calculation_9440218134121677:qk]' scope='cols' value='true' />
+            <encoding attr='space' class='0' field='[msaccess.42027.782361319441].[sum:Calculation_9440218134121677:qk]' field-type='quantitative' reverse='true' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[msaccess.42027.782361319441].[sum:Driving Ability:qk]' palette='tableau-red-blue' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[msaccess.42027.782361319441].[sum:Driving Ability:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[msaccess.42027.782361319441].[none:Team Number:ok]</rows>
+        <cols>[msaccess.42027.782361319441].[sum:Calculation_9440218134121677:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Tele-Op Score'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='testScouting' name='msaccess.42027.782361319441' />
+          </datasources>
+          <datasource-dependencies datasource='msaccess.42027.782361319441'>
+            <column caption='Tele-Op Score' datatype='integer' name='[Calculation_1120123201029979]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[T Container Level]*4 +&#13;&#10;[T Litter in Container]*6 +&#13;&#10;[T Totes]*2' scope-isolation='false' />
+            </column>
+            <column datatype='integer' name='[Team Number]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Calculation_1120123201029979]' derivation='Avg' name='[avg:Calculation_1120123201029979:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1120123201029979]' derivation='Max' name='[max:Calculation_1120123201029979:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1120123201029979]' derivation='Min' name='[min:Calculation_1120123201029979:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Team Number]' derivation='None' name='[none:Team Number:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[msaccess.42027.782361319441].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[min:Calculation_1120123201029979:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[avg:Calculation_1120123201029979:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[max:Calculation_1120123201029979:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[msaccess.42027.782361319441].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[msaccess.42027.782361319441].[min:Calculation_1120123201029979:qk]&quot;</bucket>
+              <bucket>&quot;[msaccess.42027.782361319441].[avg:Calculation_1120123201029979:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[msaccess.42027.782361319441].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='off' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[msaccess.42027.782361319441].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[msaccess.42027.782361319441].[none:Team Number:ok]</rows>
+        <cols>[msaccess.42027.782361319441].[Multiple Values]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Tele-Op Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='testScouting' name='msaccess.42027.782361319441' />
+          </datasources>
+          <datasource-dependencies datasource='msaccess.42027.782361319441'>
+            <column caption='Total Score' datatype='integer' name='[Calculation_0740123202009117]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_3600123200835979]+[Calculation_1120123201029979]' scope-isolation='false' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[Match Number]' role='dimension' type='ordinal'>
+            </column>
+            <column datatype='integer' name='[Team Number]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Match Number]' derivation='None' name='[none:Match Number:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Team Number]' derivation='None' name='[none:Team Number:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_0740123202009117]' derivation='Sum' name='[sum:Calculation_0740123202009117:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <trendline enable-confidence-bands='false' enabled='true' exclude-color='false' exclude-intercept='false' exclude-panes='false' fit='linear'>
+            </trendline>
+          </pane>
+        </panes>
+        <rows>([msaccess.42027.782361319441].[none:Team Number:ok] * [msaccess.42027.782361319441].[sum:Calculation_0740123202009117:qk])</rows>
+        <cols>[msaccess.42027.782361319441].[none:Match Number:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Total Score'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='testScouting' name='msaccess.42027.782361319441' />
+          </datasources>
+          <datasource-dependencies datasource='msaccess.42027.782361319441'>
+            <column caption='Total Score' datatype='integer' name='[Calculation_0740123202009117]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_3600123200835979]+[Calculation_1120123201029979]' scope-isolation='false' />
+            </column>
+            <column datatype='integer' name='[Team Number]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Calculation_0740123202009117]' derivation='Avg' name='[avg:Calculation_0740123202009117:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0740123202009117]' derivation='Max' name='[max:Calculation_0740123202009117:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0740123202009117]' derivation='Min' name='[min:Calculation_0740123202009117:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Team Number]' derivation='None' name='[none:Team Number:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[msaccess.42027.782361319441].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[min:Calculation_0740123202009117:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[avg:Calculation_0740123202009117:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[msaccess.42027.782361319441].[max:Calculation_0740123202009117:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[msaccess.42027.782361319441].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[msaccess.42027.782361319441].[min:Calculation_0740123202009117:qk]&quot;</bucket>
+              <bucket>&quot;[msaccess.42027.782361319441].[avg:Calculation_0740123202009117:qk]&quot;</bucket>
+              <bucket>&quot;[msaccess.42027.782361319441].[max:Calculation_0740123202009117:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[msaccess.42027.782361319441].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='off' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[msaccess.42027.782361319441].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[msaccess.42027.782361319441].[none:Team Number:ok]</rows>
+        <cols>[msaccess.42027.782361319441].[Multiple Values]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Autonomous Value'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+            <card pane-specification-id='0' param='[msaccess.42027.782361319441].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[msaccess.42027.782361319441].[:Measure Names]</field>
+          <field>[msaccess.42027.782361319441].[none:Team Number:ok]</field>
+        </color-one-way>
+      </highlight>
+      <viewpoint>
+      </viewpoint>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Autonomous Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+            <card pane-specification-id='0' param='[msaccess.42027.782361319441].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[msaccess.42027.782361319441].[:Measure Names]</field>
+          <field>[msaccess.42027.782361319441].[none:Team Number:ok]</field>
+        </color-one-way>
+      </highlight>
+      <viewpoint>
+      </viewpoint>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Tele-Op Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+            <card pane-specification-id='0' param='[msaccess.42027.782361319441].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[msaccess.42027.782361319441].[:Measure Names]</field>
+          <field>[msaccess.42027.782361319441].[none:Team Number:ok]</field>
+          <field>[msaccess.42027.782361319441].[sum:Calculation_1120123201029979:qk]</field>
+        </color-one-way>
+      </highlight>
+      <viewpoint>
+      </viewpoint>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Total Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+            <card pane-specification-id='0' param='[msaccess.42027.782361319441].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[msaccess.42027.782361319441].[:Measure Names]</field>
+          <field>[msaccess.42027.782361319441].[none:Team Number:ok]</field>
+        </color-one-way>
+      </highlight>
+      <viewpoint>
+      </viewpoint>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+            <card pane-specification-id='1' param='[msaccess.42027.782361319441].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[msaccess.42027.782361319441].[:Measure Names]</field>
+          <field>[msaccess.42027.782361319441].[none:Team Number:ok]</field>
+        </color-one-way>
+      </highlight>
+      <viewpoint>
+      </viewpoint>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Autonomous Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[msaccess.42027.782361319441].[none:Match Number:ok]</field>
+          <field>[msaccess.42027.782361319441].[none:Team Number:ok]</field>
+        </color-one-way>
+      </highlight>
+      <viewpoint>
+      </viewpoint>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Tele-Op Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[msaccess.42027.782361319441].[none:Match Number:ok]</field>
+          <field>[msaccess.42027.782361319441].[none:Team Number:ok]</field>
+        </color-one-way>
+      </highlight>
+      <viewpoint>
+      </viewpoint>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Reliability'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[msaccess.42027.782361319441].[sum:Driving Ability:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[msaccess.42027.782361319441].[none:Team Number:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Pit Scouting Summary'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[msaccess.42027.782361319441].[none:A Container:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:A Robot (Pit Scouting):nk]</field>
+          <field>[msaccess.42027.782361319441].[none:A Stacked Tote (Pit Scouting):nk]</field>
+          <field>[msaccess.42027.782361319441].[none:A Tote:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Base Type:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Capacity:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Comments (Pit Scouting):nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Containers:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Coopertition:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Litter:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Motors:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Primary Zone (Pit Scouting):nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Robot Speed:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Starting Position (Pit Scouting):nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Team Name:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Team Number (Pit Scouting):ok]</field>
+          <field>[msaccess.42027.782361319441].[none:Totes:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Type of Drivetrain:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Type of Wheels:nk]</field>
+          <field>[msaccess.42027.782361319441].[none:Upside-down Totes:nk]</field>
+        </color-one-way>
+      </highlight>
+      <viewpoint>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='86' name='Autonomous Score' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABWCAYAAACZ45lZAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAD6klEQVR4nO3cb2gbdRzH8c+2UFn9A2PzD1ToOoQWA2MEJophezaVgTrxxKKbhWWjoKvY
+      rTisD5zoKARbIk43XDGuLdEMUilObGEwS1BpMbJBaIqjMtayIQTsylYGCeeDlGGTdgVd1ua+
+      79ezy/3y4w7yzt39QrvKdV1XgFGrl/sAgOVEADCNAGAaAcA0AoBpBADTCACmEQBMIwCYRgAw
+      jQBgGgHANAKAaQQA0wgAphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGCa
+      b6kBmUzmbhwHsCxW8c9xyyuTyaihoWG5DwOL4BYIphEATFvyGaByzejCN53q/nFcV27k5Kuu
+      0/bmgwo9+ZDWzBuX1dCRAzqZrlFjV1i7av69L690d7OODE4r2BZXy9a5eaMd+vTsH7p206fq
+      uh1qfb9Jm++/i6eGO8azV4CbI18pnEir6rmj6o3H9MWedfqps13RdH7euNnRPsXSuYUnmRpQ
+      dHB6/rypb3Xi3J9a98IninW3aMtfP6ijc0jZcp0IysqzV4B7nmhRT7zl1nZVfb1qlFLy14z2
+      +v2FF/MXlTiV1PUFZ5jRcM9pXSqeNxDSsWhobmu1ajdIP6czmtAOrb/zp4Ey8+wVoFj2fKrk
+      w5w926czWb/89aXj8+m4elL3yu9/dNE589PjGp+SfIEtYp2nMpkIIH+5X+HecUk+PV6/qfDi
+      7Kj6Ymmt3/mannmw+B1TGogO6npgt17dvKZ4Z8HVAbXvO67UA1u1v+lp8QhQmTwfQP5yv9rf
+      jWkiJ+nhndr11FpJeV1MnFJSQe156TEVf8Rnhnt0+lKtnN3bdN9iEz/yvDpiX6p54+/6vPUj
+      DfEQUJE8/EPYlAYOt6l3Iif5NumVox/q5Y1VhT39bXonVnxDVBB8Majkd8kF99U2dik8f5lI
+      s8MdeuOzlAJvfa3D29aWvIcfwlY416Ny50+4TY7jOk7IjYxcu+3YkYjjOs4hNzFZum8ycch1
+      HMeNjMxtf/+e+7rT5HYl/3ZzuavumQ8aXSd0zP3txsJzj42N/c8zQTl5dhUoM/rL3OrOtJLh
+      vbr1nR5sU7ywoP+f1Dz7tt6cjOjk8X1qjPhUXbddrR+HFCj98kcF8PAt0MrALdDK5vmHYOB2
+      CACmEQBMIwCYRgAwbclVIP4kEl7GMihM4xYIphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYR
+      AEwjAJhGADCNAGAaAcA0AoBpBADTCACmEQBMIwCYRgAwjQBgGgHANAKAaQQA0wgAphEATCMA
+      mEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGDaPw8nyd4/4ViYAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='86' name='Tele-Op Score' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABWCAYAAACZ45lZAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAD6klEQVR4nO3cb2gbdRzH8c+2UFn9A2PzD1ToOoQWA2MEJophezaVgTrxxKKbhWWjoKvY
+      rTisD5zoKARbIk43XDGuLdEMUilObGEwS1BpMbJBaIqjMtayIQTsylYGCeeDlGGTdgVd1ua+
+      79ezy/3y4w7yzt39QrvKdV1XgFGrl/sAgOVEADCNAGAaAcA0AoBpBADTCACmEQBMIwCYRgAw
+      jQBgGgHANAKAaQQA0wgAphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGCa
+      b6kBmUzmbhwHsCxW8c9xyyuTyaihoWG5DwOL4BYIphEATFvyGaByzejCN53q/nFcV27k5Kuu
+      0/bmgwo9+ZDWzBuX1dCRAzqZrlFjV1i7av69L690d7OODE4r2BZXy9a5eaMd+vTsH7p206fq
+      uh1qfb9Jm++/i6eGO8azV4CbI18pnEir6rmj6o3H9MWedfqps13RdH7euNnRPsXSuYUnmRpQ
+      dHB6/rypb3Xi3J9a98IninW3aMtfP6ijc0jZcp0IysqzV4B7nmhRT7zl1nZVfb1qlFLy14z2
+      +v2FF/MXlTiV1PUFZ5jRcM9pXSqeNxDSsWhobmu1ajdIP6czmtAOrb/zp4Ey8+wVoFj2fKrk
+      w5w926czWb/89aXj8+m4elL3yu9/dNE589PjGp+SfIEtYp2nMpkIIH+5X+HecUk+PV6/qfDi
+      7Kj6Ymmt3/mannmw+B1TGogO6npgt17dvKZ4Z8HVAbXvO67UA1u1v+lp8QhQmTwfQP5yv9rf
+      jWkiJ+nhndr11FpJeV1MnFJSQe156TEVf8Rnhnt0+lKtnN3bdN9iEz/yvDpiX6p54+/6vPUj
+      DfEQUJE8/EPYlAYOt6l3Iif5NumVox/q5Y1VhT39bXonVnxDVBB8Majkd8kF99U2dik8f5lI
+      s8MdeuOzlAJvfa3D29aWvIcfwlY416Ny50+4TY7jOk7IjYxcu+3YkYjjOs4hNzFZum8ycch1
+      HMeNjMxtf/+e+7rT5HYl/3ZzuavumQ8aXSd0zP3txsJzj42N/c8zQTl5dhUoM/rL3OrOtJLh
+      vbr1nR5sU7ywoP+f1Dz7tt6cjOjk8X1qjPhUXbddrR+HFCj98kcF8PAt0MrALdDK5vmHYOB2
+      CACmEQBMIwCYRgAwbclVIP4kEl7GMihM4xYIphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYR
+      AEwjAJhGADCNAGAaAcA0AoBpBADTCACmEQBMIwCYRgAwjQBgGgHANAKAaQQA0wgAphEATCMA
+      mEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGDaPw8nyd4/4ViYAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='86' name='Total Score' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABWCAYAAACZ45lZAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAD6klEQVR4nO3cb2gbdRzH8c+2UFn9A2PzD1ToOoQWA2MEJophezaVgTrxxKKbhWWjoKvY
+      rTisD5zoKARbIk43XDGuLdEMUilObGEwS1BpMbJBaIqjMtayIQTsylYGCeeDlGGTdgVd1ua+
+      79ezy/3y4w7yzt39QrvKdV1XgFGrl/sAgOVEADCNAGAaAcA0AoBpBADTCACmEQBMIwCYRgAw
+      jQBgGgHANAKAaQQA0wgAphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGCa
+      b6kBmUzmbhwHsCxW8c9xyyuTyaihoWG5DwOL4BYIphEATFvyGaByzejCN53q/nFcV27k5Kuu
+      0/bmgwo9+ZDWzBuX1dCRAzqZrlFjV1i7av69L690d7OODE4r2BZXy9a5eaMd+vTsH7p206fq
+      uh1qfb9Jm++/i6eGO8azV4CbI18pnEir6rmj6o3H9MWedfqps13RdH7euNnRPsXSuYUnmRpQ
+      dHB6/rypb3Xi3J9a98IninW3aMtfP6ijc0jZcp0IysqzV4B7nmhRT7zl1nZVfb1qlFLy14z2
+      +v2FF/MXlTiV1PUFZ5jRcM9pXSqeNxDSsWhobmu1ajdIP6czmtAOrb/zp4Ey8+wVoFj2fKrk
+      w5w926czWb/89aXj8+m4elL3yu9/dNE589PjGp+SfIEtYp2nMpkIIH+5X+HecUk+PV6/qfDi
+      7Kj6Ymmt3/mannmw+B1TGogO6npgt17dvKZ4Z8HVAbXvO67UA1u1v+lp8QhQmTwfQP5yv9rf
+      jWkiJ+nhndr11FpJeV1MnFJSQe156TEVf8Rnhnt0+lKtnN3bdN9iEz/yvDpiX6p54+/6vPUj
+      DfEQUJE8/EPYlAYOt6l3Iif5NumVox/q5Y1VhT39bXonVnxDVBB8Majkd8kF99U2dik8f5lI
+      s8MdeuOzlAJvfa3D29aWvIcfwlY416Ny50+4TY7jOk7IjYxcu+3YkYjjOs4hNzFZum8ycch1
+      HMeNjMxtf/+e+7rT5HYl/3ZzuavumQ8aXSd0zP3txsJzj42N/c8zQTl5dhUoM/rL3OrOtJLh
+      vbr1nR5sU7ywoP+f1Dz7tt6cjOjk8X1qjPhUXbddrR+HFCj98kcF8PAt0MrALdDK5vmHYOB2
+      CACmEQBMIwCYRgAwbclVIP4kEl7GMihM4xYIphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYR
+      AEwjAJhGADCNAGAaAcA0AoBpBADTCACmEQBMIwCYRgAwjQBgGgHANAKAaQQA0wgAphEATCMA
+      mEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGDaPw8nyd4/4ViYAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='86' name='Distribution' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABWCAYAAACZ45lZAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAD6klEQVR4nO3cb2gbdRzH8c+2UFn9A2PzD1ToOoQWA2MEJophezaVgTrxxKKbhWWjoKvY
+      rTisD5zoKARbIk43XDGuLdEMUilObGEwS1BpMbJBaIqjMtayIQTsylYGCeeDlGGTdgVd1ua+
+      79ezy/3y4w7yzt39QrvKdV1XgFGrl/sAgOVEADCNAGAaAcA0AoBpBADTCACmEQBMIwCYRgAw
+      jQBgGgHANAKAaQQA0wgAphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGCa
+      b6kBmUzmbhwHsCxW8c9xyyuTyaihoWG5DwOL4BYIphEATFvyGaByzejCN53q/nFcV27k5Kuu
+      0/bmgwo9+ZDWzBuX1dCRAzqZrlFjV1i7av69L690d7OODE4r2BZXy9a5eaMd+vTsH7p206fq
+      uh1qfb9Jm++/i6eGO8azV4CbI18pnEir6rmj6o3H9MWedfqps13RdH7euNnRPsXSuYUnmRpQ
+      dHB6/rypb3Xi3J9a98IninW3aMtfP6ijc0jZcp0IysqzV4B7nmhRT7zl1nZVfb1qlFLy14z2
+      +v2FF/MXlTiV1PUFZ5jRcM9pXSqeNxDSsWhobmu1ajdIP6czmtAOrb/zp4Ey8+wVoFj2fKrk
+      w5w926czWb/89aXj8+m4elL3yu9/dNE589PjGp+SfIEtYp2nMpkIIH+5X+HecUk+PV6/qfDi
+      7Kj6Ymmt3/mannmw+B1TGogO6npgt17dvKZ4Z8HVAbXvO67UA1u1v+lp8QhQmTwfQP5yv9rf
+      jWkiJ+nhndr11FpJeV1MnFJSQe156TEVf8Rnhnt0+lKtnN3bdN9iEz/yvDpiX6p54+/6vPUj
+      DfEQUJE8/EPYlAYOt6l3Iif5NumVox/q5Y1VhT39bXonVnxDVBB8Majkd8kF99U2dik8f5lI
+      s8MdeuOzlAJvfa3D29aWvIcfwlY416Ny50+4TY7jOk7IjYxcu+3YkYjjOs4hNzFZum8ycch1
+      HMeNjMxtf/+e+7rT5HYl/3ZzuavumQ8aXSd0zP3txsJzj42N/c8zQTl5dhUoM/rL3OrOtJLh
+      vbr1nR5sU7ywoP+f1Dz7tt6cjOjk8X1qjPhUXbddrR+HFCj98kcF8PAt0MrALdDK5vmHYOB2
+      CACmEQBMIwCYRgAwbclVIP4kEl7GMihM4xYIphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYR
+      AEwjAJhGADCNAGAaAcA0AoBpBADTCACmEQBMIwCYRgAwjQBgGgHANAKAaQQA0wgAphEATCMA
+      mEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGDaPw8nyd4/4ViYAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
+<xsd:element name="dataroot">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element ref="Match_x0020_Scouting" minOccurs="0" maxOccurs="unbounded"/>
+</xsd:sequence>
+<xsd:attribute name="generated" type="xsd:dateTime"/>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Match_x0020_Scouting">
+<xsd:annotation>
+<xsd:appinfo>
+<od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
+<od:tableProperty name="Orientation" type="2" value="0"/>
+<od:tableProperty name="OrderByOn" type="1" value="0"/>
+<od:tableProperty name="NameMap" type="11" value="CswOVQAAAABU0ffq4Z0PTZBy4dDLOqVuAAAAAA71pwVaWORAAAAAAPgDAABNAGEA
+dABjAGgAIABTAGMAbwB1AHQAaQBuAGcAAAAAAAAAj2A5d98Dt0e9UMaWBfss+AcA
+AABU0ffq4Z0PTZBy4dDLOqVuSQBEAAAAAAAAADwVr6NZQHNOqDa5GPajPbsHAAAA
+VNH36uGdD02QcuHQyzqlbk0AYQB0AGMAaAAAAAAAAABjKswWJHpySJpc+n3pUBMk
+BwAAAFTR9+rhnQ9NkHLh0Ms6pW5UAGUAYQBtACAAIwAAAAAAAADLTyYoxSHWTqV8
+yAEIEIw0BwAAAFTR9+rhnQ9NkHLh0Ms6pW5BACAAMQAtAFAAdAAgAFMAaABvAHQA
+AAAAAAAAor7mGTeJWEuCk6ui5UNJRwcAAABU0ffq4Z0PTZBy4dDLOqVuQQAgADEA
+MAAtAFAAdAAgAFMAaABvAHQAAAAAAAAA8GndcTqGIUK4/Mp91u9CDwcAAABU0ffq
+4Z0PTZBy4dDLOqVuQQAgAE0AaQBzAHMAZQBkACAAUwBoAG8AdAAAAAAAAABtXh6v
+53R9S47XWCGcjkJ7BwAAAFTR9+rhnQ9NkHLh0Ms6pW5IAG8AdAAgAEcAbwBhAGwA
+AAAAAAAAo72DCVCxVkCfPK1ETT7J8gcAAABU0ffq4Z0PTZBy4dDLOqVuUwB0AGEA
+cgB0AGkAbgBnACAAUABvAHMAaQB0AGkAbwBuAAAAAAAAAEyJap15uXhDvgHuJZjx
+k/UHAAAAVNH36uGdD02QcuHQyzqlblQAIAAxAC0AUAB0ACAAUwBoAG8AdAAAAAAA
+AAAfszo14dcoS7WQxqGf6zWbBwAAAFTR9+rhnQ9NkHLh0Ms6pW5UACAAMQAwAC0A
+UAB0ACAAUwBoAG8AdAAAAAAAAAA0jb0KaGULSo7pFdoj1RmjBwAAAFTR9+rhnQ9N
+kHLh0Ms6pW5UACAATQBpAHMAcwBlAGQAIABTAGgAbwB0AAAAAAAAAOTtwPM4UcRK
+kghiIPvxQvwHAAAAVNH36uGdD02QcuHQyzqlbkMAYQB0AGMAaAAAAAAAAABnlZKU
+lnwlTp6l0CC4aWBeBwAAAFTR9+rhnQ9NkHLh0Ms6pW5UAHIAdQBzAHMAAAAAAAAA
+/26xCgLxZ0eURCtoM182EgcAAABU0ffq4Z0PTZBy4dDLOqVuQQBzAHMAaQBzAHQA
+AAAAAAAA7MGQsppOv0eaBbJbBfNE3QcAAABU0ffq4Z0PTZBy4dDLOqVuUwBwAGUA
+ZQBkAAAAAAAAAFx3UdD/rSNDoaKWdQGt/7kHAAAAVNH36uGdD02QcuHQyzqlbkYA
+bwB1AGwAAAAAAAAAM8rzUTzVfUyE/K790xsPBwcAAABU0ffq4Z0PTZBy4dDLOqVu
+VABlAGMAaAAgAEYAbwB1AGwAAAAAAAAAH1bF5MUbUUWpG2ts6N0GlgcAAABU0ffq
+4Z0PTZBy4dDLOqVuWQBlAGwAbABvAHcAIABDAGEAcgBkAAAAAAAAAJ1LNGR3wNhJ
+pbBAwjsm5yQHAAAAVNH36uGdD02QcuHQyzqlblIAZQBkACAAQwBhAHIAZAAAAAAA
+AAAtoFQY7MblR7kjcbR3HAE9BwAAAFTR9+rhnQ9NkHLh0Ms6pW5OAG8AIABTAGgA
+bwB3AAAAAAAAAIeh8+9eWuBKhM3lgR63RT4HAAAAVNH36uGdD02QcuHQyzqlbkQA
+ZQBhAGQAIABSAG8AYgBvAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAEAAAA
+AAAAAAAAAAAAAAAAAAA=
+"/>
+<od:tableProperty name="DefaultView" type="2" value="2"/>
+<od:tableProperty name="GUID" type="9" value="VNH36uGdD02QcuHQyzqlbg==
+"/>
+<od:tableProperty name="DisplayViewsOnSharePointSite" type="2" value="1"/>
+<od:tableProperty name="TotalsRow" type="1" value="0"/>
+<od:tableProperty name="FilterOnLoad" type="1" value="0"/>
+<od:tableProperty name="OrderByOnLoad" type="1" value="1"/>
+<od:tableProperty name="HideNewField" type="1" value="0"/>
+<od:tableProperty name="DatasheetAlternateBackColor" type="4" value="15658734"/>
+</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="ID" minOccurs="1" od:jetType="autonumber" od:sqlSType="int" od:autoUnique="yes" od:nonNullable="yes" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="1"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="j2A5d98Dt0e9UMaWBfss+A==
+"/>
+<od:fieldProperty name="Format" type="10" value="General Number"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Match" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1224"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="2"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="2"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="PBWvo1lAc06oNrkY9qM9uw==
+"/>
+<od:fieldProperty name="Format" type="10" value="Standard"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Team_x0020__x0023_" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1140"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="3"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="YyrMFiR6ckiaXPp96VATJA==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="A_x0020_1-Pt_x0020_Shot" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1272"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="4"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="y08mKMUh1k6lfMgBCBCMNA==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="A_x0020_10-Pt_x0020_Shot" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1392"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="5"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="or7mGTeJWEuCk6ui5UNJRw==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="A_x0020_Missed_x0020_Shot" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1536"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="6"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="8GndcTqGIUK4/Mp91u9CDw==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Hot_x0020_Goal" minOccurs="1" od:jetType="yesno" od:sqlSType="bit" od:nonNullable="yes" type="xsd:boolean">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1092"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="7"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Format" type="10" value="Yes/No"/>
+<od:fieldProperty name="DefaultValue" type="12" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="106"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="bV4er+d0fUuO11ghnI5Cew==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Starting_x0020_Position" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1788"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="8"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="IMEMode" type="2" value="0"/>
+<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="o72DCVCxVkCfPK1ETT7J8g==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="T_x0020_1-Pt_x0020_Shot" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1284"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="9"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="TIlqnXm5eEO+Ae4lmPGT9Q==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="T_x0020_10-Pt_x0020_Shot" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1368"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="10"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="H7M6NeHXKEu1kMahn+s1mw==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="T_x0020_Missed_x0020_Shot" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="11"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="IMEMode" type="2" value="0"/>
+<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="NI29CmhlC0qO6RXaI9UZow==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Catch" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="804"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="12"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="5O3A8zhRxEqSCGIg+/FC/A==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Truss" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="780"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="13"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="Z5WSlJZ8JU6epdAguGlgXg==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Assist" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="792"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="14"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="/26xCgLxZ0eURCtoM182Eg==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Speed" minOccurs="1" od:jetType="yesno" od:sqlSType="bit" od:nonNullable="yes" type="xsd:boolean">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="912"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="15"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Format" type="10" value="Yes/No"/>
+<od:fieldProperty name="DefaultValue" type="12" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="106"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="7MGQsppOv0eaBbJbBfNE3Q==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Foul" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="948"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="16"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="XHdR0P+tI0OhopZ1Aa3/uQ==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Tech_x0020_Foul" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1200"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="17"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="M8rzUTzVfUyE/K790xsPBw==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Yellow_x0020_Card" minOccurs="1" od:jetType="yesno" od:sqlSType="bit" od:nonNullable="yes" type="xsd:boolean">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1416"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="18"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Format" type="10" value="Yes/No"/>
+<od:fieldProperty name="DefaultValue" type="12" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="106"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="H1bF5MUbUUWpG2ts6N0Glg==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Red_x0020_Card" minOccurs="1" od:jetType="yesno" od:sqlSType="bit" od:nonNullable="yes" type="xsd:boolean">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1176"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="19"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Format" type="10" value="Yes/No"/>
+<od:fieldProperty name="DefaultValue" type="12" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="106"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="nUs0ZHfA2EmlsEDCOybnJA==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="No_x0020_Show" minOccurs="1" od:jetType="yesno" od:sqlSType="bit" od:nonNullable="yes" type="xsd:boolean">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1116"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="20"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Format" type="10" value="Yes/No"/>
+<od:fieldProperty name="DefaultValue" type="12" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="106"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="LaBUGOzG5Ue5I3G0dxwBPQ==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Dead_x0020_Robot" minOccurs="1" od:jetType="yesno" od:sqlSType="bit" od:nonNullable="yes" type="xsd:boolean">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="1344"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="21"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Format" type="10" value="Yes/No"/>
+<od:fieldProperty name="DefaultValue" type="12" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="106"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+<od:fieldProperty name="GUID" type="9" value="h6Hz715a4EqEzeWBHrdFPg==
+"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

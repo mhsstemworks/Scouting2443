@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook version='8.2' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8100.13.1231.1350                -->
+  <preferences>
+  </preferences>
+  <datasources>
+    <datasource caption='Match Scouting (CentralValleyScouting.accdb)' inline='true' name='msaccess.41678.687568784720' version='8.2'>
+      <connection authentication='no' class='msaccess' driver='Ace12' filename='C:\Users\Robotics\Desktop\2443 Scouting\CentralValleyScouting.accdb' mdwpath=''>
+        <relation name='Match Scouting' table='[Match Scouting]' type='table' />
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Yellow Card Count' datatype='integer' name='[Calculation_1860129164149127]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if[Yellow Card]&#13;&#10;then 1&#13;&#10;else 0&#13;&#10;end' scope-isolation='false' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[ID]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Team Number]' role='dimension' type='ordinal'>
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Autonomous Score'>
+      <table>
+        <view>
+          <datasources>
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows></rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Autonomous Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[msaccess.41667.839987511572].[:Measure Names]</field>
+          <field>[msaccess.41667.839987511572].[none:Team Number:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='144' name='Autonomous Score' width='174'>
+      iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAIAAAAeHsdkAAAAA3NCSVQICAjb4U/gAAAACXBI
+      WXMAABJ0AAASdAHeZh94AAABQElEQVR4nO3SMQHAMAzAsKz8OWePObSHhMCHv90dmDm3A3iF
+      FYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWI
+      FYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWI
+      FYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWI
+      FYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWI
+      FYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWI
+      FYgViBWIFYgViBWIFcgP9eEEHcxAtUgAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
