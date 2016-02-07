@@ -1,7 +1,7 @@
 <html>
 <body>
 <title>Thank you</title>
-    <form action="http://10.24.43.30/index.html">
+    <form action="http://10.24.43.30/page.html">
     <input type="submit" value="Go to log in">
                                     </form>                                            
 
