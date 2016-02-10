@@ -3,17 +3,17 @@
 
 body
 {
-	width:auto;
-	height:100%;
+	width: auto;
+	height: 100%;
 	/*background-image:url(background.jpg);
   background-repeat: no-repeat;*/
-	background-color:#66ffff;
+	background-color:#0099CC;
 	background-attachment:scroll;
 	position:relative;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size:20px;
 	font-weight:lighter;
-	margin:auto;
+	margin:0 auto;
 	/*max-width: 50%;*/
 }
 
@@ -24,7 +24,6 @@ body
 
 .column1
 {
-  height:100%;
   width:350px;
 	float:left;
 	padding:0 75px;
@@ -32,25 +31,9 @@ body
 
 .column2
 {
-  height:100%;
   width:350px;
 	float:left;
 	padding:0 25px;
-}
-
-.column3
-{
-  height:100%;
-  width:300px;
-  float:left;
-  padding:0 25px;
-}
-
-.qty 
-{
-  width: 40px;
-  height: 20px;
-  text-align: center;
 }
 
 input.qtyplus { 
@@ -119,4 +102,8 @@ inputs-moz-placeholder {
   -webkit-transition:background-color 1s;
   -moz-transition:background-color 1s;
   background-color: #00FFFF;
+}
+
+.bottom {
+  float:bottom;
 }
