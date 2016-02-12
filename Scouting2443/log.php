@@ -1,12 +1,10 @@
 <html>
 <body>
 <title>Thank you</title>
-    <form action="http://10.24.43.30/page.html">
+    <form action="http://10.24.43.31/page.html">
     <input type="submit" value="Go to log in">
-                                    </form>                                            
+                                    </form>                                             
 
-    
-    
 </body>
 </html>
 
@@ -31,7 +29,7 @@
 	$deadRobot = $_POST["deadRobot"];
 	$foul = $_POST["foul"];
 	$techFoul = $_POST["techFoul"];
-	$yellowCard = $_POST["yellowCard"];
+	$yellowCard = $_POST["yellowCard"]; 
 	$redCard = $_POST["redCard"];
 	$comments = $_POST["comments"];
 
@@ -48,3 +46,5 @@ $fp = fopen("list.csv","a");
   }
 
 fclose($fp); 
+
+?>
