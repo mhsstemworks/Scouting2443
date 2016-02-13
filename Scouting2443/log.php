@@ -22,7 +22,7 @@
 	$tLowGoal = $_POST["tLowGoal"];
 	$tHighGoal = $_POST["tHighGoal"];
 	$tHighGoalMiss = $_POST["tHighGoalMiss"];
-	$primaryZone = $_POST["primaryZone"];
+	$primaryPosition = $_POST["primaryPosition"];
 	$challenge = $_POST["challenge"];
 	$scale = $_POST["scale"];
 	$noShow = $_POST["noShow"];
@@ -33,10 +33,7 @@
 	$redCard = $_POST["redCard"];
 	$comments = $_POST["comments"];
 
-$list = array(array($matchNumber,$teamNumber,$startingPosition,$aReach,$aCross,$aLowGoal,
-					$aHighGoal,$aHighGoalMiss,$tCross,$tLowGoal,$tHighGoal,$tHighGoalMiss,
-					$challenge,$scale,$noShow,$deadRobot,$foul,$techFoul,$yellowCard,$redCard,
-					$comments));
+$list = array(array($matchNumber,$teamNumber,$startingPosition,$aReach,$aCross,$aLowGoal,$aHighGoal,$aHighGoalMiss,$tCross,$tLowGoal,$tHighGoal,$tHighGoalMiss,$primaryPosition,$challenge,$scale,$noShow,$deadRobot,$foul,$techFoul,$yellowCard,$redCard,$comments));
 
 $fp = fopen("list.csv","a");
 
