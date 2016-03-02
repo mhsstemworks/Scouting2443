@@ -10,7 +10,7 @@
     <datasource caption='list' inline='true' name='textscan.0oj1dtu1jdf9zu1gjmiun17dma0r' version='9.2'>
       <connection class='textscan' directory='C:/Users/Robotics/Documents/GitHub/Scouting2443/Scouting2443' filename='list.csv' password='' server='' username=''>
         <relation name='list#csv' table='[list#csv]' type='table'>
-          <columns character-set='UTF-8' header='no' locale='en_US' separator=','>
+          <columns character-set='UTF-8' header='no' locale='en_US' separator=',' text-qualifier='&quot;'>
             <column datatype='integer' name='F1' ordinal='0' />
             <column datatype='integer' name='F2' ordinal='1' />
             <column datatype='string' name='F3' ordinal='2' />
@@ -397,45 +397,510 @@
               <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
               <attribute datatype='string' name='header-row'>&quot;false&quot;</attribute>
               <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;\&quot;&quot;</attribute>
               <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
             </attributes>
           </metadata-record>
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
-      <column caption='tLowGoal' datatype='integer' name='[F10]' role='dimension' type='ordinal' />
-      <column caption='tHighGoal' datatype='integer' name='[F11]' role='dimension' type='ordinal' />
-      <column caption='tHighGoalMiss' datatype='integer' name='[F12]' role='dimension' type='ordinal' />
+      <column caption='Auto Score' datatype='integer' name='[Calculation_16888552439177216]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[F4]*2+&#13;&#10;[F5]*10+&#13;&#10;[F6]*5+&#13;&#10;[F7]*10' />
+      </column>
+      <column caption='Tele-Op Score' datatype='integer' name='[Calculation_16888552444805121]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[F9] * 5 +&#13;&#10;[F10] * 2 + &#13;&#10;[F11] * 5 +&#13;&#10;[F14] * 5 +&#13;&#10;[F15] * 15' />
+      </column>
+      <column caption='Total Score' datatype='integer' name='[Calculation_16888552445444098]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_16888552439177216] + [Calculation_16888552444805121]' />
+      </column>
+      <column caption='Auto Shot Percentage' datatype='real' name='[Calculation_16888552446128132]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[F7]/[Calculation_16888552446763013]' />
+      </column>
+      <column caption='Auto Shots' datatype='integer' name='[Calculation_16888552446763013]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[F7] + [F8]' />
+      </column>
+      <column caption='Tele-Op Shots' datatype='integer' name='[Calculation_16888552448913414]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[F11] + [F12]' />
+      </column>
+      <column caption='Tele-Op Shot Percentage' datatype='real' name='[Calculation_16888552449093639]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[F11] / [Calculation_16888552448913414]' />
+      </column>
+      <column caption='Total Shots' datatype='integer' name='[Calculation_16888552451887112]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_16888552448913414] + [Calculation_16888552446763013]' />
+      </column>
+      <column caption='Total Shot Percentage' datatype='real' name='[Calculation_16888552452276233]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([F7] + [F11]) / [Calculation_16888552451887112]' />
+      </column>
+      <column caption='tLowGoal' datatype='integer' name='[F10]' role='measure' type='quantitative' />
+      <column caption='tHighGoal' datatype='integer' name='[F11]' role='measure' type='quantitative' />
+      <column caption='tHighGoalMiss' datatype='integer' name='[F12]' role='measure' type='quantitative' />
       <column caption='primaryPosition' datatype='string' name='[F13]' role='dimension' type='nominal' />
-      <column caption='challenge' datatype='integer' name='[F14]' role='dimension' type='ordinal' />
-      <column caption='scale' datatype='integer' hidden='true' name='[F15]' role='dimension' type='ordinal' />
-      <column caption='noShow' datatype='integer' hidden='true' name='[F16]' role='dimension' type='ordinal' />
-      <column caption='deadRobot' datatype='integer' hidden='true' name='[F17]' role='dimension' type='ordinal' />
-      <column caption='foul' datatype='integer' hidden='true' name='[F18]' role='dimension' type='ordinal' />
-      <column caption='techFoul' datatype='integer' hidden='true' name='[F19]' role='dimension' type='ordinal' />
-      <column caption='matchNumber' datatype='integer' name='[F1]' role='dimension' type='ordinal' />
-      <column caption='yellowCard' datatype='integer' hidden='true' name='[F20]' role='dimension' type='ordinal' />
-      <column caption='redCard' datatype='integer' hidden='true' name='[F21]' role='dimension' type='ordinal' />
+      <column caption='challenge' datatype='integer' name='[F14]' role='measure' type='quantitative' />
+      <column caption='scale' datatype='integer' name='[F15]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='%null%' value='0' />
+        </aliases>
+      </column>
+      <column caption='noShow' datatype='integer' name='[F16]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='%null%' value='0' />
+        </aliases>
+      </column>
+      <column caption='deadRobot' datatype='integer' name='[F17]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='%null%' value='0' />
+        </aliases>
+      </column>
+      <column caption='foul' datatype='integer' name='[F18]' role='dimension' type='ordinal' />
+      <column caption='techFoul' datatype='integer' name='[F19]' role='dimension' type='ordinal' />
+      <column caption='matchNumber' datatype='integer' name='[F1]' role='measure' type='quantitative' />
+      <column caption='yellowCard' datatype='integer' name='[F20]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='%null%' value='0' />
+        </aliases>
+      </column>
+      <column caption='redCard' datatype='integer' name='[F21]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='%null%' value='0' />
+        </aliases>
+      </column>
       <column caption='comments' datatype='string' name='[F22]' role='dimension' type='nominal' />
-      <column caption='teamNumber' datatype='integer' name='[F2]' role='dimension' type='ordinal' />
+      <column datatype='string' hidden='true' name='[F25]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[F26]' role='dimension' type='nominal' />
+      <column caption='teamNumber' datatype='integer' name='[F2]' role='measure' type='quantitative' />
+      <column datatype='string' hidden='true' name='[F35]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[F36]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[F37]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[F38]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[F39]' role='dimension' type='nominal' />
       <column caption='startingPosition' datatype='string' name='[F3]' role='dimension' type='nominal' />
-      <column caption='aReach' datatype='integer' hidden='true' name='[F4]' role='dimension' type='ordinal' />
-      <column caption='aCross' datatype='integer' name='[F5]' role='dimension' type='ordinal' />
-      <column caption='aLowGoal' datatype='integer' name='[F6]' role='dimension' type='ordinal' />
-      <column caption='aHighGoal' datatype='integer' name='[F7]' role='dimension' type='ordinal' />
-      <column caption='aHighGoalMiss' datatype='integer' name='[F8]' role='dimension' type='ordinal' />
-      <column caption='tCross' datatype='integer' name='[F9]' role='dimension' type='ordinal' />
+      <column datatype='string' hidden='true' name='[F40]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[F41]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[F42]' role='dimension' type='nominal' />
+      <column caption='aReach' datatype='integer' name='[F4]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='%null%' value='0' />
+        </aliases>
+      </column>
+      <column caption='aCross' datatype='integer' name='[F5]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='%null%' value='0' />
+        </aliases>
+      </column>
+      <column caption='aLowGoal' datatype='integer' name='[F6]' role='measure' type='quantitative' />
+      <column caption='aHighGoal' datatype='integer' name='[F7]' role='measure' type='quantitative' />
+      <column caption='aHighGoalMiss' datatype='integer' name='[F8]' role='measure' type='quantitative' />
+      <column caption='tCross' datatype='integer' name='[F9]' role='measure' type='quantitative' />
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
-      <layout dim-ordering='alphabetic' dim-percentage='0.657997' measure-ordering='alphabetic' measure-percentage='0.342003' show-hidden-fields='true' show-structure='true' />
+      <column-instance column='[Calculation_16888552439177216]' derivation='Avg' name='[avg:Calculation_16888552439177216:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_16888552444805121]' derivation='Avg' name='[avg:Calculation_16888552444805121:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_16888552445444098]' derivation='Avg' name='[avg:Calculation_16888552445444098:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_16888552439177216]' derivation='Max' name='[max:Calculation_16888552439177216:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_16888552444805121]' derivation='Max' name='[max:Calculation_16888552444805121:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_16888552445444098]' derivation='Max' name='[max:Calculation_16888552445444098:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_16888552439177216]' derivation='Min' name='[min:Calculation_16888552439177216:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_16888552444805121]' derivation='Min' name='[min:Calculation_16888552444805121:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_16888552445444098]' derivation='Min' name='[min:Calculation_16888552445444098:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_16888552439177216]' derivation='Sum' name='[sum:Calculation_16888552439177216:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[F14]' derivation='Sum' name='[sum:F14:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.371912' measure-ordering='alphabetic' measure-percentage='0.628088' show-aliased-fields='true' show-hidden-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#09622a'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552444805121:qk]&quot;</bucket>
+            </map>
+            <map to='#26456e'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552445444098:qk]&quot;</bucket>
+            </map>
+            <map to='#339444'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552444805121:qk]&quot;</bucket>
+            </map>
+            <map to='#3a87b7'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552445444098:qk]&quot;</bucket>
+            </map>
+            <map to='#9c0824'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552439177216:qk]&quot;</bucket>
+            </map>
+            <map to='#9c0824'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[sum:Calculation_16888552439177216:qk]&quot;</bucket>
+            </map>
+            <map to='#b4d4da'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552445444098:qk]&quot;</bucket>
+            </map>
+            <map to='#bccfb4'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552444805121:qk]&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[sum:F14:qk]&quot;</bucket>
+            </map>
+            <map to='#d8392c'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552439177216:qk]&quot;</bucket>
+            </map>
+            <map to='#eac0bd'>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552439177216:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
     </datasource>
   </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Tele-Op Score' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Measure Names' />
+        <param name='target' value='Tele-Op Score' />
+      </command>
+    </action>
+  </actions>
   <worksheets>
-    <worksheet name='Sheet 1'>
+    <worksheet name='Auto Score'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='list' name='textscan.0oj1dtu1jdf9zu1gjmiun17dma0r' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0oj1dtu1jdf9zu1gjmiun17dma0r'>
+            <column caption='Auto Score' datatype='integer' name='[Calculation_16888552439177216]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[F4]*2+&#13;&#10;[F5]*10+&#13;&#10;[F6]*5+&#13;&#10;[F7]*10' />
+            </column>
+            <column caption='teamNumber' datatype='integer' name='[F2]' role='measure' type='quantitative' />
+            <column caption='aReach' datatype='integer' name='[F4]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='%null%' value='0' />
+              </aliases>
+            </column>
+            <column caption='aCross' datatype='integer' name='[F5]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='%null%' value='0' />
+              </aliases>
+            </column>
+            <column caption='aLowGoal' datatype='integer' name='[F6]' role='measure' type='quantitative' />
+            <column caption='aHighGoal' datatype='integer' name='[F7]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_16888552439177216]' derivation='Avg' name='[avg:Calculation_16888552439177216:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_16888552439177216]' derivation='Max' name='[max:Calculation_16888552439177216:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_16888552439177216]' derivation='Min' name='[min:Calculation_16888552439177216:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[F2]' derivation='None' name='[none:F2:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552439177216:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552439177216:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552439177216:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552439177216:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552439177216:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552439177216:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <sort class='computed' column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[none:F2:ok]' direction='DESC' using='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552439177216:qk]' />
+          <slices>
+            <column>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552439177216:qk]' value='false' />
+            <format attr='break-on-special' field='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552439177216:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552439177216:qk]' value='false' />
+            <format attr='omit-on-special' field='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552439177216:qk]' value='false' />
+            <format attr='break-on-special' field='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552439177216:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552439177216:qk]' value='false' />
+            <format attr='omit-on-special' field='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552439177216:qk]' value='false' />
+            <format attr='break-on-special' field='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552439177216:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552439177216:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='7'>
+            <view>
+              <breakdown value='off' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[none:F2:ok]</rows>
+        <cols>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[Multiple Values]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Auto Shot Percentage'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Auto/Tele-Op Trend'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Comments'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Distribution'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Tele-Op Score'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='list' name='textscan.0oj1dtu1jdf9zu1gjmiun17dma0r' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0oj1dtu1jdf9zu1gjmiun17dma0r'>
+            <column caption='Tele-Op Score' datatype='integer' name='[Calculation_16888552444805121]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[F9] * 5 +&#13;&#10;[F10] * 2 + &#13;&#10;[F11] * 5 +&#13;&#10;[F14] * 5 +&#13;&#10;[F15] * 15' />
+            </column>
+            <column caption='tLowGoal' datatype='integer' name='[F10]' role='measure' type='quantitative' />
+            <column caption='tHighGoal' datatype='integer' name='[F11]' role='measure' type='quantitative' />
+            <column caption='challenge' datatype='integer' name='[F14]' role='measure' type='quantitative' />
+            <column caption='scale' datatype='integer' name='[F15]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='%null%' value='0' />
+              </aliases>
+            </column>
+            <column caption='teamNumber' datatype='integer' name='[F2]' role='measure' type='quantitative' />
+            <column caption='tCross' datatype='integer' name='[F9]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_16888552444805121]' derivation='Avg' name='[avg:Calculation_16888552444805121:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_16888552444805121]' derivation='Max' name='[max:Calculation_16888552444805121:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_16888552444805121]' derivation='Min' name='[min:Calculation_16888552444805121:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[F2]' derivation='None' name='[none:F2:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552444805121:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552444805121:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552444805121:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552444805121:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552444805121:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552444805121:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <sort class='computed' column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[none:F2:ok]' direction='DESC' using='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552444805121:qk]' />
+          <slices>
+            <column>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height-header' value='20' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='off' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[none:F2:ok]</rows>
+        <cols>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[Multiple Values]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Tele-Op Shot Percentage'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Total Score'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='list' name='textscan.0oj1dtu1jdf9zu1gjmiun17dma0r' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0oj1dtu1jdf9zu1gjmiun17dma0r'>
+            <column caption='Auto Score' datatype='integer' name='[Calculation_16888552439177216]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[F4]*2+&#13;&#10;[F5]*10+&#13;&#10;[F6]*5+&#13;&#10;[F7]*10' />
+            </column>
+            <column caption='Tele-Op Score' datatype='integer' name='[Calculation_16888552444805121]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[F9] * 5 +&#13;&#10;[F10] * 2 + &#13;&#10;[F11] * 5 +&#13;&#10;[F14] * 5 +&#13;&#10;[F15] * 15' />
+            </column>
+            <column caption='Total Score' datatype='integer' name='[Calculation_16888552445444098]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_16888552439177216] + [Calculation_16888552444805121]' />
+            </column>
+            <column caption='tLowGoal' datatype='integer' name='[F10]' role='measure' type='quantitative' />
+            <column caption='tHighGoal' datatype='integer' name='[F11]' role='measure' type='quantitative' />
+            <column caption='challenge' datatype='integer' name='[F14]' role='measure' type='quantitative' />
+            <column caption='scale' datatype='integer' name='[F15]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='%null%' value='0' />
+              </aliases>
+            </column>
+            <column caption='teamNumber' datatype='integer' name='[F2]' role='measure' type='quantitative' />
+            <column caption='aReach' datatype='integer' name='[F4]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='%null%' value='0' />
+              </aliases>
+            </column>
+            <column caption='aCross' datatype='integer' name='[F5]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='%null%' value='0' />
+              </aliases>
+            </column>
+            <column caption='aLowGoal' datatype='integer' name='[F6]' role='measure' type='quantitative' />
+            <column caption='aHighGoal' datatype='integer' name='[F7]' role='measure' type='quantitative' />
+            <column caption='tCross' datatype='integer' name='[F9]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_16888552445444098]' derivation='Avg' name='[avg:Calculation_16888552445444098:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_16888552445444098]' derivation='Max' name='[max:Calculation_16888552445444098:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_16888552445444098]' derivation='Min' name='[min:Calculation_16888552445444098:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[F2]' derivation='None' name='[none:F2:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552445444098:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552445444098:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552445444098:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[min:Calculation_16888552445444098:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[avg:Calculation_16888552445444098:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[max:Calculation_16888552445444098:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[none:F2:ok]</rows>
+        <cols>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[Multiple Values]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Total Shot Percentage'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Total Trend'>
       <table>
         <view>
           <datasources />
@@ -456,7 +921,198 @@
     </worksheet>
   </worksheets>
   <windows source-height='32'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+    <window class='worksheet' maximized='true' name='Auto Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+            <card pane-specification-id='7' param='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Tele-Op Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+            <card pane-specification-id='0' param='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Total Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+            <card pane-specification-id='0' param='[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0oj1dtu1jdf9zu1gjmiun17dma0r].[:Measure Names]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Auto/Tele-Op Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Total Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Auto Shot Percentage'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Tele-Op Shot Percentage'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Total Shot Percentage'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Comments'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -477,7 +1133,312 @@
     </window>
   </windows>
   <thumbnails>
-    <thumbnail height='144' name='Sheet 1' width='174'>
+    <thumbnail height='192' name='Auto Score' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Tele-Op Score' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Total Score' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='144' name='Distribution' width='174'>
+      iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAYAAACRfFAzAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAABmUlEQVR4nO3SQQ0AIBDAMMC/58MDH7KkVbDH9szMgpjzOwBeGJck45JkXJKMS5JxSTIu
+      ScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45Jk
+      XJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYl
+      ybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKM
+      S5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgk
+      GZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5Jx
+      STIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck
+      45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuSRePYgUc7kJNEQAAAABJRU5ErkJg
+      gg==
+    </thumbnail>
+    <thumbnail height='144' name='Auto/Tele-Op Trend' width='174'>
+      iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAYAAACRfFAzAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAABmUlEQVR4nO3SQQ0AIBDAMMC/58MDH7KkVbDH9szMgpjzOwBeGJck45JkXJKMS5JxSTIu
+      ScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45Jk
+      XJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYl
+      ybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKM
+      S5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgk
+      GZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5Jx
+      STIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck
+      45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuSRePYgUc7kJNEQAAAABJRU5ErkJg
+      gg==
+    </thumbnail>
+    <thumbnail height='144' name='Total Trend' width='174'>
+      iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAYAAACRfFAzAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAABmUlEQVR4nO3SQQ0AIBDAMMC/58MDH7KkVbDH9szMgpjzOwBeGJck45JkXJKMS5JxSTIu
+      ScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45Jk
+      XJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYl
+      ybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKM
+      S5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgk
+      GZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5Jx
+      STIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck
+      45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuSRePYgUc7kJNEQAAAABJRU5ErkJg
+      gg==
+    </thumbnail>
+    <thumbnail height='144' name='Auto Shot Percentage' width='174'>
+      iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAYAAACRfFAzAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAABmUlEQVR4nO3SQQ0AIBDAMMC/58MDH7KkVbDH9szMgpjzOwBeGJck45JkXJKMS5JxSTIu
+      ScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45Jk
+      XJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYl
+      ybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKM
+      S5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgk
+      GZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5Jx
+      STIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck
+      45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuSRePYgUc7kJNEQAAAABJRU5ErkJg
+      gg==
+    </thumbnail>
+    <thumbnail height='144' name='Tele-Op Shot Percentage' width='174'>
+      iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAYAAACRfFAzAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAABmUlEQVR4nO3SQQ0AIBDAMMC/58MDH7KkVbDH9szMgpjzOwBeGJck45JkXJKMS5JxSTIu
+      ScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45Jk
+      XJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYl
+      ybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKM
+      S5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgk
+      GZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5Jx
+      STIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck
+      45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuSRePYgUc7kJNEQAAAABJRU5ErkJg
+      gg==
+    </thumbnail>
+    <thumbnail height='144' name='Total Shot Percentage' width='174'>
+      iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAYAAACRfFAzAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAABmUlEQVR4nO3SQQ0AIBDAMMC/58MDH7KkVbDH9szMgpjzOwBeGJck45JkXJKMS5JxSTIu
+      ScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45Jk
+      XJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYl
+      ybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKM
+      S5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgk
+      GZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5Jx
+      STIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck
+      45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuSRePYgUc7kJNEQAAAABJRU5ErkJg
+      gg==
+    </thumbnail>
+    <thumbnail height='144' name='Comments' width='174'>
       iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAYAAACRfFAzAAAACXBIWXMAABJ0AAASdAHeZh94
       AAABmUlEQVR4nO3SQQ0AIBDAMMC/58MDH7KkVbDH9szMgpjzOwBeGJck45JkXJKMS5JxSTIu
       ScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45Jk
